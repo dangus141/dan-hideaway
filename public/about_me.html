@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css-files/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> dan's hideaway | about me</title>
+    <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting - fixes cache issues -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Path to your CSS file (like usual), or empty ("") if you don't have one:
+            const CSS_FILE_PATH = "style.css";
+
+            // Path to your JS file (like usual), or empty ("") if you don't have one:
+            const JS_FILE_PATH = "script.js";
+
+            function loadScript(src) {
+                const script = document.createElement("script");
+                script.src = src + "?nocache=" + new Date().getTime();
+                script.async = true;
+                document.head.appendChild(script);
+            }
+            function loadCSS(href) {
+                const link = document.createElement("link");
+                link.rel = "stylesheet";
+                link.href = href + "?nocache=" + new Date().getTime();
+                document.head.appendChild(link);
+            }
+            if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
+            if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
+        });
+
+        src="https://iframe.chat/scripts/main.min.js"
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="flex-row" style="align-items: center; justify-content: space-between;"><div style="height: fit-content;">
+    <ul class="flex-row nav-bar" style="list-style: none; padding-left: 1em; margin: 0;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_me.html">About Me</a></li>
+        <li>
+            <div class="dropdown">
+                <a href="">Media</a>
+                <ul class="dropdown-content flex-column" style="list-style: none;">
+                    <li><a href="">Games</a></li><li><a href="">Music</a></li><li><a href="">Museums</a></li><li><a href="">Fun</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li>
+            <div class="dropdown">
+                <a href="">Links</a>
+                <ul class="dropdown-content flex-column" style="list-style: none;"">
+                    <li><a href="">Resources</a></li><li><a href="">Cool Stuff</a></li><li><a href="https://boxd.it/dtiD7" target="_blank"
+                        rel="noopener noreferrer">Letterboxd</a></li>
+                    </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div style="padding-right: 1em;">
+    <img src="../public/images/old-web/buttons/transflag.png" style="width: 70px; object-fit: contain; margin: 0.25em" />
+    <img src="../public/images/old-web/buttons/gaypride.png"
+        style="width: 70px; object-fit: contain; margin: 0.25em" />
+    <img src="../public/images/old-web/buttons/riversea.png" style="width: 70px; object-fit: contain; margin: 0.25em" />
+</div></nav>
+            
+<main></main>
+
+            
+        <footer><div>
+    <!-- FC2 Counter  Starts here -->
+    <script type="text/javascript" src="//counter1.fc2.com/counter.php?id=40502904&main=1"></script>
+    <noscript><img src="//counter1.fc2.com/counter_img.php?id=40502904&main=1" /></noscript>
+    <!-- FC2 Counter  Ends here -->
+</div></footer>
+
+        <!-- 
+        11ty layout guide:
+        
+        % include "" % requires a njk file to include.
+        % block % requires a PAGE-SPECIFIC njk or html file, in this case index.html, to define the content for that block.
+
+        % include % is for reusable components that are the same across multiple pages, like the header, nav, and
+        footer.
+        % block % is for page-specific content that will be different on each page, like the main content and aside.
+        Each page can define its own content for the blocks, while still using the same overall layout defined in this
+        layout.njk file.
+        -->
+
+    </div>
+</body>
+
+</html>

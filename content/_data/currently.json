@@ -1,0 +1,20 @@
+{
+  "playing": [
+    { "name": "Warframe", "url": "https://en.wikipedia.org/wiki/Warframe" }
+  ],
+  "reading": [
+    { "name": "The Master and Margarita", "url": "https://en.wikipedia.org/wiki/The_Master_and_Margarita" },
+    { "name": "How To Hide An Empire: A History of the Greater United States", "url": "https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire" }
+  ],
+  "listening": [
+    { "name": "Parokya Ni Edgar", "url": "https://youtu.be/VVLkGch0Cl0?si=mrn8EbTTnPHaHKGF" },
+    { "name": "Eraserheads", "url": "https://youtu.be/W9fuRht0WpA?si=P_bmtOB07hX7M9kJ" }
+  ],
+  "watching": [
+    { "name": "Game of Thrones", "url": "https://en.wikipedia.org/wiki/Game_of_Thrones" }
+  ],
+  "creating": [
+    { "name": "Blueberry Raglan Sweater", "url": "https://www.ravelry.com/patterns/library/blueberry-raglan" },
+    { "name": "This website!", "url": "" }
+  ]
+}

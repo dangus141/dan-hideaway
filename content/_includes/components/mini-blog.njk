@@ -1,0 +1,28 @@
+<article class="newspaper dropshadow content-box" style="text-align: center; position: relative;">
+        <img class="image-dropshadow floating-image" src="../public/images/page-assets/scrap/arizonastamp.png" alt=""
+            style="object-fit: contain; width: 70px; margin-right: 1em; left: -30px; bottom: -35px; transform: rotate(10deg);">
+        <img class="image-dropshadow floating-image" src="../public/images/page-assets/scrap/philippinesstamp.png"
+            alt=""
+            style="object-fit: contain; width: 85px; margin-right: 1em; left: -40px; top: -20px; transform: rotate(-10deg);">
+    <h2 class="blue-header" style="font-size: 25px; padding-bottom: 0.05em;">Mini Blog</h2>
+    {% set latestPost = collections.featured | reverse | first %}
+    {% if latestPost.data.featured_image %}
+    <div id="mini-blog" class="scrolling-contentbox" style="padding: 0.5em;">
+        <a href="{{ latestPost.data.featured_image | stripSlash }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ latestPost.data.featured_image | stripSlash }}" alt="Cover for {{ latestPost.data.title }}"
+                style="
+                                                        float: left;
+                                                    width: 80px;
+                                                    border: 1px solid;
+                                                    padding: 2px;
+                                                    margin: 5px;
+                                                        ">
+        </a>
+        {% endif %}
+        <h3 style="font-family: Glacier-Bold;">{{ latestPost.data.title }}</h3>
+        <p>{{ latestPost.date | readableDate }}</p>
+        <p>{{ latestPost.templateContent | excerpt }}</p>
+        <hr style="margin-top: 10px; margin-bottom: 5px" />
+        <p style="font-family: Glacier;">Read my other posts <a href="blog.html">here</a>!</p>
+    </div>
+</article>

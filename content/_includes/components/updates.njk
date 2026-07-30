@@ -1,0 +1,16 @@
+<article class="newspaper dropshadow content-box" style="text-align: center; position: relative;">
+    <img class="image-dropshadow floating-image" src="../public/images/page-assets/scrap/stars.png" alt=""
+        style="object-fit: contain; width: 70px; margin-right: 1em; left: -30px; bottom: -35px; transform: rotate(50deg);">
+    <img class="image-dropshadow floating-image" src="../public/images/page-assets/scrap/pricetag.png" alt=""
+        style="object-fit: contain; width: 85px; margin-right: 1em; right: -40px; top: -40px; transform: rotate(-10deg);">
+    <img class="image-dropshadow floating-image" src="../public/images/page-assets/scrap/fishstamp.jpg" alt=""
+        style="object-fit: contain; width: 85px; margin-right: 1em; right: -40px; bottom: -40px; transform: rotate(-10deg);">
+    <h2 class="blue-header" style="font-size: 25px; padding-bottom: 0.05em;">Updates</h2>
+    <div class="scrolling-contentbox" style="padding: 0.5em;">
+        {% for item in updates %}
+        <b style="font-family: Glacier-Bold; font-size: 18px;">{{ item.date }}</b>
+        <p>{{ item.text }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+</article>
