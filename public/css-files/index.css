@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-.container, nav {
+.container,
+nav {
     min-width: 63.375rem;
 }
 
@@ -164,6 +165,20 @@ aside {
 
 footer {
     grid-area: footer;
+    background: url(../images/bgs/gingham/gingham-lavender.jpg);
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: center;
+    padding: 0.1em;
+    margin: 0 auto;
+    gap: 1em;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+footer > * {
+    margin: 1px;
 }
 
 marquee {

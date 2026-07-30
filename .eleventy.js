@@ -9,9 +9,13 @@ module.exports = function (eleventyConfig) {
   });
 
   // Your readableDate filter
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    if (!dateObj) return "Date not available";
-    return new Date(dateObj).toLocaleDateString();
+    eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return dateObj.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short", // Outputs "Jan" instead of "January"
+      day: "2-digit",  // Outputs "01" instead of "1"
+      timeZone: "UTC" // Prevents local timezone shifts
+    });
   });
 
   // The Excerpt filter 
