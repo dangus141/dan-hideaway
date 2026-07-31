@@ -1,5 +1,5 @@
 {
-  "name": "website-layout-1",
+  "name": "dan-hideaway",
   "private": true,
   "scripts": {
     "build": "npx @11ty/eleventy",
@@ -7,6 +7,12 @@
     "watch": "npx @11ty/eleventy --watch"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5"
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "overrides": {
+    "brace-expansion": "^5.0.8"
+  },
+  "dependencies": {
+    "glightbox": "^3.3.1"
   }
 }

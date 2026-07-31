@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css-files/index.css{{ nocache }}" />
+    <link rel="stylesheet" href="dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,16 +34,21 @@
             if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
         });
 
-        src="https://iframe.chat/scripts/main.min.js"
+        src = "https://iframe.chat/scripts/main.min.js"
     </script>
+    <script src="dist/js/glightbox.min.js"></script>
+    <style>
+        {% block style %}
+        {% endblock %}
+    </style>
 </head>
 
 <body>
     <div class="container">
         <nav class="flex-row" style="align-items: center; justify-content: space-between;">{% include
             "components/nav.njk" %}</nav>
-            {% block main %}{% endblock %}
-            {% block aside %}{% endblock %}
+        {% block main %}{% endblock %}
+        {% include "components/aside.njk" %}
         {% include "components/footer.njk" %}
 
         <!-- 
@@ -59,6 +65,7 @@
         -->
 
     </div>
+    <script src="js-files/glightbox-personal.js"></script>
 </body>
 
 </html>

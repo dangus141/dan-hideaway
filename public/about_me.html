@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css-files/index.css" />
+    <link rel="stylesheet" href="dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +34,47 @@
             if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
         });
 
-        src="https://iframe.chat/scripts/main.min.js"
+        src = "https://iframe.chat/scripts/main.min.js"
     </script>
+    <script src="dist/js/glightbox.min.js"></script>
+    <style>
+        
+.aboutme-box {
+background-color: rgba(215, 239, 250, 0.84);
+border-radius: 0.75em;
+}
+
+#aboutme_list p {
+margin: 8px;
+}
+
+#aboutme_list b {
+font-family: Glacier-Bold;
+}
+
+.movieimage {
+cursor: pointer;
+border: none; /* Removes default borders in older browsers */
+transition: transform 0.2s; /* Smooth effect for hover */
+width: 90px;
+margin-right: 0.5em;
+}
+
+.movieimage:hover {
+transform: scale(1.4);
+z-index: 10;
+}
+
+.pokemon img {
+object-fit: contain;
+}
+
+.pokemon img:hover {
+transform: scale(1.2);
+z-index: 10;
+}
+
+    </style>
 </head>
 
 <body>
@@ -69,10 +109,311 @@
         style="width: 70px; object-fit: contain; margin: 0.25em" />
     <img src="images/old-web/buttons/riversea.png" style="width: 70px; object-fit: contain; margin: 0.25em" />
 </div></nav>
-            
-<main></main>
+        
+<main>
+    <article id="fast_facts" class="flex-row">
+        <div class="flex-column dropshadow newspaper" style="padding-top: 0; max-width: 450px;">
+            <h2 class="blue-header">About Me</h2>
+            <div id="aboutme_list" style="text-align: left">
+                <p><b>Names</b>: Dan, Jeco, dangus</p>
+                <p><b>Pronouns</b>: he/him/his</p>
+                <p><b>Age</b>: 24 years old</p>
+                <div class="flex-row" style="display: flex; align-items: center">
+                    <p><b>Identities</b>:</p>
+                    <img src="images/old-web/buttons/Gay.png" style="width: 6em; object-fit: contain; margin: 0.1em" />
+                    <img src="images/old-web/buttons/filipino.png"
+                        style="width: 6em; object-fit: contain; margin: 0.1em" />
+                    <img src="images/old-web/buttons/infj.png" style="width: 6em; object-fit: contain; margin: 0.1em" />
+                    <img src="images/old-web/buttons/leo.png" style="width: 6em; object-fit: contain; margin: 0.1em" />
+                </div>
+                <div class="flex-row" style="align-items: center">
+                    <p><b>Final Fantasy Job</b>:</p>
+                    <img src="images/old-web/buttons/bluemage.png"
+                        style="width: 6em; object-fit: contain; margin: 0.1em" />
+                    <p><b>DND Class</b>:</p>
+                    <img src="images/old-web/buttons/wizarddnd.png"
+                        style="width: 6em; object-fit: contain; margin: 0.1em" />
+                </div>
+                <div class="flex-row" style="align-items: center">
+                    <p><b>Favorite Color</b>: Aqua Blue</p>
+                    <p><b>Handedness</b>: Left-handed</p>
+                </div>
+                <div class="flex-row" style="align-items: center">
+                    <p><b>Favorite Planets</b>: Earth &amp; Saturn</p>
+                    <p><b>Favorite Seasons</b>: Summer &amp; Fall</p>
+                </div>
+                <p><b>Favorite Tamagotchis:</b> Kuchipatchi &amp; Ginjirotchi <img
+                        src="images/page-assets/tamagotchi/kuchipatchi_close_up.webp" style="margin-right: 0.25em;"><img
+                        src="images/page-assets/tamagotchi/ginjirotchi_close_up.webp"></p>
+                <p>
+                    <b>Things I want to learn right now</b>: knitting colorwork, playing
+                    the guitar &amp; just playing music again, getting better at Tagalog
+                </p>
+            </div>
+        </div>
+        <img src="images/about-me/me-dithered.png"
+            style="position: absolute; right: -90px; top:-30px; transform: rotate(5deg); object-fit: contain; width: 500px; z-index: -1; filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));">
+    </article>
+    <div class="flex-column" style="align-items: center; gap: 1em;">
+        <section id="main_about_me" class="flex-row"
+            style="justify-content: flex-end; align-items: center; gap: 1.2em;">
+            <div class="flex-column" style="align-items: center;">
+                <img src="images/dividers/buttons.gif"
+                    style="width: 270px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666); margin-bottom: 1em;" />
+                <div class="flex-row" style="align-items: center;">
+                    <div class="flex-column" style="justify-content: center; align-items: center; gap: 0.25em;">
+                        <img src="images/old-web/stamps/dwebble.png" style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);     background-image: url(images/bgs/wavesbg-animated.gif);
+    background-size: contain;" />
+                        <img src="images/old-web/stamps/gascoigne.png"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                        <img src="images/old-web/stamps/clubpenguin.gif"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                        <img src="images/old-web/blinkies/blinkie-gone-phishing.gif"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                    </div>
+                    <div class="flex-column" style="justify-content: center; align-items: center; gap: 0.25em;">
+                        <img src="images/old-web/stamps/water_ripples.gif"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                        <img src="images/old-web/stamps/stars.png"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                        <img src="images/old-web/stamps/smiling%20friends.webp"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                        <img src="images/old-web/blinkies/likefish.gif"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                    </div>
+                </div>
+                <img src="images/dividers/buttons.gif"
+                    style="width: 270px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666); margin-top: 1em;" />
+            </div>
+            <div class="flex-column dropshadow newspaper" style="padding-top: 0; max-width: 470px;">
+                <div class="padding">
+                    <p>
+                        Hello! My name is Dan or <i>dangus</i> online. Welcome to my website!
+                    </p>
+                    <p>
+                        I made this website as a personal project. I want my own space on the internet that I
+                        can call my own without any of the hangups of using/relying on social media. I want to
+                        feel free to express my own views and post my own content how I want it to be. I also
+                        enjoy the challenge of learning HTML and CSS; I hope to improve my webdev skills as I
+                        continue working on this website.
+                    </p>
+                    <p>
+                        I love to learn and I love when people talk my ear off about their passions!
+                        <i>Please share what interests you with me!</i> I find myself wanting to learn
+                        everything but not having enough time to really get deep into a subject!
+                    </p>
+                    <p>
+                        My interests are video games (mainly rpgs), museums, music, ttrpgs, board
+                        games, politics, biology, space, philosophy, geography, history, art, and lots
+                        more things!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <article id="pokemon" class="flex-row" style="justify-content: flex-end; align-items: center; gap: 1.2em;">
+            <div class="flex-column dropshadow newspaper" style="padding-top: 0;">
+                <h2 class="blue-header">My Favorite Pokemon</h2>
+                <div class="flex-column padding" style="align-items: center;">
+                    <div class="flex-row pokemon">
+                        <img src="images/about-me/pokemon/empoleon.png" />
+                        <img src="images/about-me/pokemon/wobbufett.png" />
+                        <img src="images/about-me/pokemon/appletun.png" />
+                        <img src="images/about-me/pokemon/duosion.png" />
+                        <img src="images/about-me/pokemon/psyduck.png" />
+                    </div>
+                    <button class="glightbox bluelink" data-glightbox="gallery1" data-type="image"
+                        data-href="images/about-me/pokemon/pokemon-detailed.png"
+                        data-description="Ultimate Favorite Pokemon Picker made by <a href='https://cajunavenger.github.io' target='_blank'/>CajunAvenger</a>!"
+                        style="width: 150px;">
+                        More of my Favorites!
+                    </button>
+                </div>
+            </div>
+            <div class="flex-column" style="align-items: center;">
+                <img src="images/dividers/buttons.gif"
+                    style="width: 270px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666); margin-bottom: 1em;" />
+                <div class="flex-row" style="align-items: center;">
+                    <div class="flex-column" style="justify-content: center; align-items: center; gap: 0.25em;">
+                        <img src="images/old-web/stamps/blue_stars_space.png" style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);     background-image: url(images/bgs/wavesbg-animated.gif);
+    background-size: contain;" />
+                    </div>
+                    <div class="flex-column" style="justify-content: center; align-items: center; gap: 0.25em;">
+                        <img src="images/old-web/stamps/pond_river.gif"
+                            style="width: 120px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+                    </div>
+                </div>
+                <img src="images/dividers/buttons.gif"
+                    style="width: 270px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666); margin-top: 1em;" />
+            </div>
+        </article>
+        <article class="flex-row" style="justify-content: flex-end; align-items: center; gap: 1.2em;">
+            <div id="letterboxd" class="flex-column dropshadow newspaper"
+                style="padding-top: 0; max-width: 450px; min-height: 386px;">
+                <h2 class="blue-header">Letterboxd Top 4</h2>
+                <div class="flex-column padding" style="align-items: center;">
+                    <div class="flex-row">
+                        <img src="images/about-me/movies/mulholland-drive.jpg" class="dropshadow movieimage" /><img
+                            src="images/about-me/movies/twin-peaks.jpg" class="dropshadow movieimage" /><img
+                            src="images/about-me/movies/eeaao.jpg" class="dropshadow movieimage" />
+                        <img src="images/about-me/movies/im-a-cheerleader.jpg" class="dropshadow movieimage" />
+                    </div>
+                    <div class="times">
+                        <p style="text-align: left">
+                            For one reason or another, these movies really resonated with me.
+                        </p>
+                        <p style="text-align: left">
+                            Common themes I enjoy are surrealist/dreamlike aesthetics &amp; imagery, movies that
+                            focus on queer stories and characters, and movies that can make me cry.
+                        </p>
 
-            
+                        <p style="text-align: left; margin-bottom: 0">
+                            Here's the rest of my
+                            <a href="https://boxd.it/dtiD7" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+                            if you want to see my really really bad reviews. It's mostly just quotes I liked
+                            from the movie or if there was a hot actor I liked. <img
+                                src="images/old-web/emoticons/hehe.gif">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="video_games" class="flex-column dropshadow newspaper"
+                style="padding-top: 0; max-width: 450px; max-height: 386px;">
+                <h2 class="blue-header">My Favorite Video Games</h2>
+                <div style="overflow-y: auto;">
+                    <div class="flex-column" style="align-items: center;">
+                        <div class="flex-row padding">
+                            <img src="images/about-me/video-games/discoelysium.png" class="dropshadow movieimage" /><img
+                                src="images/about-me/video-games/ffx.jpg" class="dropshadow movieimage" /><img
+                                src="images/about-me/video-games/darksouls.jpg" class="dropshadow movieimage" />
+                            <img src="images/about-me/video-games/mhgu.jpg" class="dropshadow movieimage" />
+                        </div>
+                        <div class="flex-row">
+                            <img src="images/about-me/video-games/residentevil.jpg" class="dropshadow movieimage" /><img
+                                src="images/about-me/video-games/sh2.jpg" class="dropshadow movieimage" />
+                            <img src="images/about-me/video-games/ggstrive.jpg" class="dropshadow movieimage" />
+                        </div>
+                    </div>
+                    <div class="padding">
+                        <p style="text-align: left">
+                            Video games have always been a huge part of my life. I enjoy playing them for the
+                            stories but also the mastery of getting good at playing them.
+                        </p>
+                        <p style="text-align: left">
+                            I've got a ton more games that I like but I think these are my all-time favorite
+                            games. These are the ones that I keep coming back to, have stories that I really enjoy, or
+                            simply have a grind that I enjoy.
+                        </p>
+                        <p style="text-align: left">
+                            My favorite genre of video game are definitely RPGs (of all kinds!) but I have
+                            also come to enjoy survival horror a lot as well. I'm not very good at them but I love
+                            fighting games too!
+                        </p>
+
+                        More on video games <a href="">here</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
+
+        <aside>
+<section class="dropshadow"
+  style="font-family: Glacier-Regular; background-color: rgba(255, 255, 255, 0.577); padding: 0.45em;">
+  <h3 style="margin-bottom: 0; font-family: Director;">Currently...</h3>
+  <hr>
+
+  <!-- Loop through each activity category -->
+  
+  <p>
+    <!-- Capitalizes the category key name (e.g., "playing", "reading") -->
+    <i style="font-family: Glacier-Bold;">Playing:</i> <br />
+
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://en.wikipedia.org/wiki/Warframe" target="_blank">Warframe</a> <br />
+    
+    
+  </p>
+  
+  <p>
+    <!-- Capitalizes the category key name (e.g., "playing", "reading") -->
+    <i style="font-family: Glacier-Bold;">Reading:</i> <br />
+
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://en.wikipedia.org/wiki/The_Master_and_Margarita" target="_blank">The Master and Margarita</a> <br />
+    
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire" target="_blank">How To Hide An Empire: A History of the Greater United States</a> <br />
+    
+    
+  </p>
+  
+  <p>
+    <!-- Capitalizes the category key name (e.g., "playing", "reading") -->
+    <i style="font-family: Glacier-Bold;">Listening:</i> <br />
+
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://youtu.be/VVLkGch0Cl0?si=mrn8EbTTnPHaHKGF" target="_blank">Parokya Ni Edgar</a> <br />
+    
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://youtu.be/W9fuRht0WpA?si=P_bmtOB07hX7M9kJ" target="_blank">Eraserheads</a> <br />
+    
+    
+  </p>
+  
+  <p>
+    <!-- Capitalizes the category key name (e.g., "playing", "reading") -->
+    <i style="font-family: Glacier-Bold;">Watching:</i> <br />
+
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://en.wikipedia.org/wiki/Game_of_Thrones" target="_blank">Game of Thrones</a> <br />
+    
+    
+  </p>
+  
+  <p>
+    <!-- Capitalizes the category key name (e.g., "playing", "reading") -->
+    <i style="font-family: Glacier-Bold;">Creating:</i> <br />
+
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * <a href="https://www.ravelry.com/patterns/library/blueberry-raglan" target="_blank">Blueberry Raglan Sweater</a> <br />
+    
+    
+    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
+    
+    * This website! <br />
+    
+    
+  </p>
+  
+</section>
+
+
+
+<div class="flex-row" style="align-items: center; gap: 0.25em;">
+    <img style="width: 100px; object-fit: contain;"
+        src="images/page-assets/tamagotchi/kuchipatchi_closeup.webp">
+    <img style="width: 120px; object-fit: contain;" src="images/page-assets/tamagotchi/ginjirotchi.webp">
+</div>
+<hr>
+
+
+
+</aside>
         <footer class="dropshadow">
 <p style="margin: 1px; text-align: center;">Last Updated: Jul 30, 2026</p>
 <a href="#" tabindex="-1">Back to Top</a>
@@ -93,6 +434,7 @@
         -->
 
     </div>
+    <script src="js-files/glightbox-personal.js"></script>
 </body>
 
 </html>
