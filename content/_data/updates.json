@@ -1,11 +1,15 @@
 [
+    {
+    "date": "31-July-2026",
+    "text": "About Me page is setup."
+  },
   {
     "date": "26-July-2026",
     "text": "Working on 11ty integration for this website. Also on vacation in the Philippines!"
   },
   {
     "date": "27-April-2026",
-    "text": "Added more stuff in my About Me page as well as lightbox functionality"
+    "text": "Added more stuff in my About Me page as well as lightbox functionality."
   },
   {
     "date": "05-April-2026",
@@ -13,7 +17,7 @@
   },
   {
     "date": "24-October-2025",
-    "text": "Another website overhaul... lol... but cleaned up my code a ton"
+    "text": "Another website overhaul. Cleaned up code."
   },
   {
     "date": "14-August-2025",
@@ -21,7 +25,7 @@
   },
   {
     "date": "10-August-2025",
-    "text": "Added chatbox"
+    "text": "Added chatbox."
   },
   {
     "date": "09-August-2025",
