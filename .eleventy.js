@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("excerpt", (post) => {
     if (!post) return "";
     const content = post.replace(/(<([^>]+)>)/gi, ""); // Remove HTML tags
-    return content.substr(0, content.lastIndexOf(" ", 200)) + "..."; 
+    return content.substr(0, content.lastIndexOf(" ", 500)) + "..."; 
   });
 
 

@@ -1,6 +1,29 @@
 ---
 title: My Blog
 data: collections.post
-layout: blog.njk
 reverse: true
+date: git Last Modified
 ---
+
+{% extends "index.njk" %}
+
+{% block style %}
+{% endblock %}
+
+{% block main %}
+<main>
+    <section class="flex-column dropshadow newspaper" style="padding-top: 0;">
+        <h2 class="blue-header">Blogposts</h2>
+        <div class="flex-row padding">
+            <ul class="flex-column glacier" style="font-size: 1.2em; list-style-type: none;">
+                <img>
+                {% for post in collections.post | reverse %}
+                <li><a href="{{post.url | stripSlash}}">{{ post.data.title }}</a> - posted on {{ post.date |
+                    readableDate }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</main>
+{% endblock %}

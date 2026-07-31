@@ -8,6 +8,10 @@ nav {
     max-width: 1014px;
 }
 
+img.glightbox {
+    cursor: pointer;
+}
+
 /* */
 /* */
 /* */
@@ -46,6 +50,10 @@ body::before {
     flex-direction: column;
 }
 
+.center-align {
+    align-items: center;
+}
+
 .fitbox {
     /* fitted box to content size*/
     box-sizing: border-box;
@@ -57,11 +65,19 @@ body::before {
 .content-box {
     width: 16.7rem;
     height: 18.75rem;
+    max-height: 18.75rem;
 }
 
 .button-box {
     width: 12.5rem;
     height: 3.4375rem;
+}
+
+.internal_content_box {
+    display: flex;
+    flex-direction: column;
+    padding: 0.75em;
+    align-items: center;
 }
 
 /* */
@@ -127,6 +143,17 @@ body::before {
     background-color: #ede7dbec;
 }
 
+.blog_image {
+    width: 250px;
+    object-fit: contain;
+    border: 1px solid;
+    padding: 2px;
+    margin: 10px;
+    filter: 0;
+    box-shadow: 3px 3px 5px #666;
+
+}
+
 /* */
 /* */
 /* */
@@ -139,6 +166,7 @@ body {
 .container {
     display: grid;
     grid-template: "nav nav" auto "aside main" auto "footer footer" auto;
+    grid-template-columns: 14rem auto;
     width: 70%;
     gap: 0.5em;
     filter: sepia(25%);
@@ -148,7 +176,6 @@ main {
     grid-area: main;
     display: flex;
     flex-direction: column;
-
     gap: 2em;
 }
 
@@ -167,7 +194,7 @@ aside {
     background: url(../images/bgs/paper/squarepaper.jpg);
     padding: 0.5em;
     box-shadow: 3px 3px 5px #666;
-    max-width: 14rem; 
+    max-width: 14rem;
 }
 
 footer {
@@ -184,7 +211,7 @@ footer {
     font-size: 0.9em;
 }
 
-footer > * {
+footer>* {
     margin: .0625rem;
 }
 
@@ -266,6 +293,10 @@ li:hover {
 
 #mini-blog a img:hover {
     transform: rotate(-2deg) scale(1.1);
+}
+
+#featured_image:hover {
+    transform: scale(1.2);
 }
 
 /* */
