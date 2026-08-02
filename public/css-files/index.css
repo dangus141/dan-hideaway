@@ -182,8 +182,6 @@ main {
 nav {
     grid-area: nav;
     background: url(../images/bgs/paper/newspaperbg.jpg);
-    display: flex;
-    flex-direction: row;
     box-shadow: 3px 3px 5px #666;
     font-family: Director;
     font-size: 18px;

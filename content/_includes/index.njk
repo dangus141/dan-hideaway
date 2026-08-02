@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css-files/index.css{{ nocache }}" />
-    <link rel="stylesheet" href="dist/css/glightbox.css" />
-    <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
+    <link rel="stylesheet" href="{{ nesting }}css-files/index.css{{ nocache }}" />
+    <link rel="stylesheet" href="{{ nesting }}dist/css/glightbox.css" />
+    <link rel="icon" type="image/x-icon" href="{{ nesting }}images/page-assets/tamagotchi/ginjirotchi_dance.webp">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> dan's hideaway | {{ title }}</title>
@@ -36,7 +36,7 @@
 
         src = "https://iframe.chat/scripts/main.min.js"
     </script>
-    <script src="dist/js/glightbox.min.js"></script>
+    <script src="{{ nesting }}dist/js/glightbox.min.js"></script>
     <style>
         {% block style %}
         {% endblock %}
@@ -65,7 +65,7 @@
         -->
 
     </div>
-    <script src="js-files/glightbox-personal.js"></script>
+    <script src="{{ nesting }}js-files/glightbox-personal.js"></script>
 </body>
 
 </html>
