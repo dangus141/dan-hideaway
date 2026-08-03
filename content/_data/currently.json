@@ -1,9 +1,9 @@
 {
   "playing": [
-    { "name": "Warframe", "url": "https://en.wikipedia.org/wiki/Warframe" }
+    { "name": "Warframe", "url": "https://en.wikipedia.org/wiki/Warframe" },
+    { "name": "Final Fantasy VII: Rebirth", "url": "https://en.wikipedia.org/wiki/Final_Fantasy_VII_Rebirth" }
   ],
   "reading": [
-    { "name": "The Master and Margarita", "url": "https://en.wikipedia.org/wiki/The_Master_and_Margarita" },
     { "name": "How To Hide An Empire: A History of the Greater United States", "url": "https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire" }
   ],
   "listening": [
