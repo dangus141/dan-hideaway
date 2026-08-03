@@ -379,6 +379,17 @@ li:hover {
     background-image: url(../images/bgs/back01.gif);
 }
 
+/* */
+/* */
+/* */
+/* border image */
+.painting_frame-border {
+    border-image-slice: 257 196 326 192;
+    border-image-width: 30px 30px 30px 30px;
+    border-image-outset: 28px 28px 28px 28px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url(../images/borders/frame-modified.png);
+}
 
 /* */
 /* */
@@ -845,6 +856,6 @@ button {
 /* media queries */
 @media (min-width: 1920px) and (max-width: 2560px) {
     body {
-        zoom: 130%;
+        zoom: 110%;
     }
 }

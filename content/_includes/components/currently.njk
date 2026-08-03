@@ -2,15 +2,10 @@
   style="font-family: Glacier-Regular; background-color: rgba(255, 255, 255, 0.577); padding: 0.45em;">
   <h3 style="margin-bottom: 0; font-family: Director;">Currently...</h3>
   <hr>
-
-  <!-- Loop through each activity category -->
   {% for category, items in currently %}
   <p>
-    <!-- Capitalizes the category key name (e.g., "playing", "reading") -->
     <i style="font-family: Glacier-Bold;">{{ category | capitalize }}:</i> <br />
-
     {% for item in items %}
-    <!-- If a URL exists, render a link. Otherwise, just output plain text -->
     {% if item.url %}
     * <a href="{{ item.url }}" target="_blank">{{ item.name }}</a> <br />
     {% else %}

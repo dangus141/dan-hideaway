@@ -1,5 +1,5 @@
 ---
-title: My Blog
+title: my blog
 data: collections.post
 reverse: true
 date: git Last Modified
@@ -18,7 +18,7 @@ date: git Last Modified
             <ul class="flex-column glacier" style="font-size: 1.2em; list-style-type: none;">
                 <img>
                 {% for post in collections.post | reverse %}
-                <li><a href="{{post.url | stripSlash}}">{{ post.data.title }}</a> - posted on {{ post.date |
+                <li><a href="{{post.url | stripSlash}}">{{ post.data.title }}</a> - {{ post.date |
                     readableDate }}
                 </li>
                 {% endfor %}
