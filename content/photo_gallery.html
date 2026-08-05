@@ -1,0 +1,73 @@
+---
+title: photo gallery
+reverse: true
+date: git Last Modified
+---
+
+{% extends "index.njk" %}
+
+{% block style %}
+{% endblock %}
+
+{% block main %}
+<main>
+    <section class="flex-column dropshadow newspaper" style="padding-top: 0;">
+        <h2 class="blue-header">Photo Gallery</h2>
+        <div class="content-container" style="gap: 0;">
+            <div class="padding">
+                <p>Here's a collection of photos of my life. Anything from stuff I found interesting in museums, streets
+                    and
+                    landmarks from my travels, and whatever else I thought looked good enough to take a photo of.</p>
+                <p>Feel free to peruse through the galleries. I'll try to put some comments on the photos as well on
+                    what I think is interesting about each one.</p>
+            </div>
+            <img src="images/dividers/buttons.gif"
+                style="width: 400px; object-fit: contain; filter: drop-shadow(3px 3px 5px #666);" />
+            <div class="flex-column padding">
+                <div class="gallery-wrapper">
+                    <h2 class="Director-font">Trips</h2>
+                    <hr>
+                    <div class="gallery-container">
+                        {% for trips in collections.trips | reverse %}
+                        <div class="flex-column center-align padding">
+                            <a href="{{trips.url | stripSlash }}"><img class="gallery-image painting_frame-border"
+                                    src="{{trips.data.featured_image| stripSlash}}" alt="{{trips.data.title}}"></a>
+                            <hr>
+                            <h3>{{ trips.data.title }}</h3>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="gallery-wrapper">
+                    <h2>Museums</h2>
+                    <hr>
+                    <div class="gallery-container">
+                        {% for museums in collections.museums | sort(attribute="data.title") %}
+                        <div class="flex-column center-align padding">
+                            <a href="{{museums.url | stripSlash }}"><img class="gallery-image painting_frame-border"
+                                    src="{{museums.data.featured_image| stripSlash}}" alt="{{museums.data.title}}"></a>
+                            <hr>
+                            <h3>{{ museums.data.title }}</h3>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="gallery-wrapper">
+                    {# <h2 class="Director-font">Nature Photos</h2>
+                    <hr> #}
+                    <div class="gallery-container">
+                        {% for nature in collections.nature %}
+                        <div class="flex-column center-align padding">
+                            <a href="{{nature.url | stripSlash }}"><img class="gallery-image painting_frame-border"
+                                    src="{{nature.data.featured_image| stripSlash}}" alt="{{nature.data.title}}"></a>
+                            <hr>
+                            <h3>{{ nature.data.title }}</h3>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
