@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css-files/index.css" />
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
     <link rel="stylesheet" href="dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
     <meta charset="UTF-8" />
@@ -53,12 +54,10 @@
             <div class="dropdown">
                 <a href="">Media</a>
                 <ul class="dropdown-content flex-column" style="list-style: none;">
-                    <s>
-                        <li><a href="">Games</a></li>
-                        <li><a href="">Music</a></li>
-                        <li><a href="">Museums</a></li>
-                        <li><a href="">Fun</a></li>
-                    </s>
+                        <li class="strikethrough"><a href="">Games</a></li>
+                        <li class="strikethrough"><a href="">Music</a></li>
+                        <li><a href="photo_gallery.html">Photos</a></li>
+                        <li class="strikethrough"><a href="">Fun</a></li>
                 </ul>
             </div>
         </li>
@@ -100,9 +99,8 @@
 <main>
     <section class="flex-column dropshadow newspaper" style="padding-top: 0;">
         <h2 class="blue-header">Blogposts</h2>
-        <div class="flex-row padding">
+        <div class="padding">
             <ul class="flex-column glacier" style="font-size: 1.2em; list-style-type: none;">
-                <img>
                 
                 <li><a href="blog-posts/2026/july/coming_back_home.html">coming back home: thoughts and feelings</a> - Jul 31, 2026
                 </li>
@@ -192,7 +190,7 @@
     <hr>
     <div class="flex-column center-align">
         <h3 style="font-family: Director; text-align: center; margin-top: 0.25em;">Man of the Month</h3>
-        <a href="https://youtu.be/--av9obx0hQ?si=iTAj6YvEVVevZATk" target="_blank"><img style="width: 180px; object-fit: contain; margin-top: 0.5em;" class="painting_frame-border"
+        <a href="https://youtu.be/--av9obx0hQ?si=iTAj6YvEVVevZATk" target="_blank"><img style="width: 180px; object-fit: contain; margin-top: 0.5em;" class="painting_frame-border dropshadow"
             src="images/page-assets/men/benoit_blanc.jpg"></a>
         <small class="dropshadow"
             style="margin-top: 1em; background-color: rgba(255, 255, 255, 0.577); padding: 0.45em;">Benoit Blanc!
@@ -229,10 +227,12 @@
 <p style="margin: 1px; text-align: center;">Last Updated: Aug 03, 2026</p>
 <a href="#" tabindex="-1">Back to Top</a>
 <script type="text/javascript" src="https://counter.websiteout.com/js/7/6/295/1"></script>
-</footer>
+</footer> 
 
         <!-- 
         11ty layout guide:
+
+        all 11ty njk files lives in _includes folder of the content folder. html files can live outside of the _includes either in the root of the content folder or in subfolders for extra organization. html files living within subfolders MUST utilize the { nesting } variable in order to properly link images, links, and other assets once built.
         
         % include "" % requires a njk file to include.
         % block % requires a PAGE-SPECIFIC njk or html file, in this case index.html, to define the content for that block.
