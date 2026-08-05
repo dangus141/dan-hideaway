@@ -14,11 +14,10 @@ date: git Last Modified
 <main>
     <section class="flex-column dropshadow newspaper" style="padding-top: 0;">
         <h2 class="blue-header">Blogposts</h2>
-        <div class="flex-row padding">
+        <div class="padding">
             <ul class="flex-column glacier" style="font-size: 1.2em; list-style-type: none;">
-                <img>
                 {% for post in collections.post | reverse %}
-                <li><a href="{{post.url | stripSlash}}">{{ post.data.title }}</a> - {{ post.date |
+                <li><a href="{{post.url | stripSlash }}">{{ post.data.title }}</a> - {{ post.date |
                     readableDate }}
                 </li>
                 {% endfor %}

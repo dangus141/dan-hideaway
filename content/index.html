@@ -6,11 +6,11 @@ date: git Last Modified
 
 {% block main %}
 <main>
-    <section class="flex-column fitbox dropshadow newspaper" style="padding-top: 0;">
+    <section class="flex-column fitbox dropshadow newspaper padding-top_0">
         <h1 class="blue-header">Welcome to my website!</h1>
         <div class="flex-row padding">
-            <img src="images/page-assets/solong.gif" alt=""
-                style="object-fit: contain; width: 300px; margin-right: 1em; filter: grayscale(40%) sepia(40%);">
+            <img class="so-long-image" src="images/page-assets/solong.gif"
+                alt="Image of fish swimming with a border that says 'So Long...' on top.">
             <div>
                 <p>
                     I'm Dan and this is my personal website! I have a lot of interests and hopefully I
@@ -26,13 +26,12 @@ date: git Last Modified
                     possible.
                 </p>
                 <p>Content <s>strikethroughed</s> means it's a WIP and currently non-functional.</p>
-                <p style="font-weight: bold;">Website established 27Jul2025 <img
-                        style="width: 25px; object-fit: contain;"
-                        src="images/page-assets/tamagotchi/ginjirotchi_dance.webp"></p>
+                <p class="bold-font">Website established 27Jul2025 <img class="dancing-ginjirotchi-image"
+                        src="images/page-assets/tamagotchi/ginjirotchi_dance.webp" alt="Small gif of Ginjirotchi dancing"></p>
             </div>
         </div>
     </section>
-    <section class="flex-row" style="justify-content:space-evenly ; align-items: center; gap: 1em;">
+    <section class="flex-row center-align" style="justify-content:space-evenly; gap: 1em;">
         {% include "components/mini-blog.njk" %}
         <div class="flex-column" style="justify-content: space-evenly; align-items: center; gap: 2em;">
             <article class="dropshadow button-box"

@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="{{ nesting }}css-files/index.css{{ nocache }}" />
+    <link rel="stylesheet" href="{{ nesting }}node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
     <link rel="stylesheet" href="{{ nesting }}dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="{{ nesting }}images/page-assets/tamagotchi/ginjirotchi_dance.webp">
     <meta charset="UTF-8" />
@@ -49,10 +50,12 @@
             "components/nav.njk" %}</nav>
         {% block main %}{% endblock %}
         {% include "components/aside.njk" %}
-        {% include "components/footer.njk" %}
+        {% include "components/footer.njk" %} 
 
         <!-- 
         11ty layout guide:
+
+        all 11ty njk files lives in _includes folder of the content folder. html files can live outside of the _includes either in the root of the content folder or in subfolders for extra organization. html files living within subfolders MUST utilize the { nesting } variable in order to properly link images, links, and other assets once built.
         
         % include "" % requires a njk file to include.
         % block % requires a PAGE-SPECIFIC njk or html file, in this case index.html, to define the content for that block.

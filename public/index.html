@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css-files/index.css" />
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
     <link rel="stylesheet" href="dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
     <meta charset="UTF-8" />
@@ -53,12 +54,10 @@
             <div class="dropdown">
                 <a href="">Media</a>
                 <ul class="dropdown-content flex-column" style="list-style: none;">
-                    <s>
-                        <li><a href="">Games</a></li>
-                        <li><a href="">Music</a></li>
-                        <li><a href="">Museums</a></li>
-                        <li><a href="">Fun</a></li>
-                    </s>
+                        <li class="strikethrough"><a href="">Games</a></li>
+                        <li class="strikethrough"><a href="">Music</a></li>
+                        <li><a href="photo_gallery.html">Photos</a></li>
+                        <li class="strikethrough"><a href="">Fun</a></li>
                 </ul>
             </div>
         </li>
@@ -98,11 +97,11 @@
 </div></nav>
         
 <main>
-    <section class="flex-column fitbox dropshadow newspaper" style="padding-top: 0;">
+    <section class="flex-column fitbox dropshadow newspaper padding-top_0">
         <h1 class="blue-header">Welcome to my website!</h1>
         <div class="flex-row padding">
-            <img src="images/page-assets/solong.gif" alt=""
-                style="object-fit: contain; width: 300px; margin-right: 1em; filter: grayscale(40%) sepia(40%);">
+            <img class="so-long-image" src="images/page-assets/solong.gif"
+                alt="Image of fish swimming with a border that says 'So Long...' on top.">
             <div>
                 <p>
                     I'm Dan and this is my personal website! I have a lot of interests and hopefully I
@@ -118,13 +117,12 @@
                     possible.
                 </p>
                 <p>Content <s>strikethroughed</s> means it's a WIP and currently non-functional.</p>
-                <p style="font-weight: bold;">Website established 27Jul2025 <img
-                        style="width: 25px; object-fit: contain;"
-                        src="images/page-assets/tamagotchi/ginjirotchi_dance.webp"></p>
+                <p class="bold-font">Website established 27Jul2025 <img class="dancing-ginjirotchi-image"
+                        src="images/page-assets/tamagotchi/ginjirotchi_dance.webp" alt="Small gif of Ginjirotchi dancing"></p>
             </div>
         </div>
     </section>
-    <section class="flex-row" style="justify-content:space-evenly ; align-items: center; gap: 1em;">
+    <section class="flex-row center-align" style="justify-content:space-evenly; gap: 1em;">
         <article class="newspaper dropshadow content-box" style="text-align: center; position: relative;">
     <img class="image-dropshadow floating-image" src="images/page-assets/scrap/arizonastamp.png" alt=""
         style="object-fit: contain; width: 70px; margin-right: 1em; left: -30px; bottom: -35px; transform: rotate(10deg);">
@@ -582,7 +580,7 @@ It&#39;s July 31st today. I&#39;m still struggling with jet lag from my recent t
     <hr>
     <div class="flex-column center-align">
         <h3 style="font-family: Director; text-align: center; margin-top: 0.25em;">Man of the Month</h3>
-        <a href="https://youtu.be/--av9obx0hQ?si=iTAj6YvEVVevZATk" target="_blank"><img style="width: 180px; object-fit: contain; margin-top: 0.5em;" class="painting_frame-border"
+        <a href="https://youtu.be/--av9obx0hQ?si=iTAj6YvEVVevZATk" target="_blank"><img style="width: 180px; object-fit: contain; margin-top: 0.5em;" class="painting_frame-border dropshadow"
             src="images/page-assets/men/benoit_blanc.jpg"></a>
         <small class="dropshadow"
             style="margin-top: 1em; background-color: rgba(255, 255, 255, 0.577); padding: 0.45em;">Benoit Blanc!
@@ -619,10 +617,12 @@ It&#39;s July 31st today. I&#39;m still struggling with jet lag from my recent t
 <p style="margin: 1px; text-align: center;">Last Updated: Aug 02, 2026</p>
 <a href="#" tabindex="-1">Back to Top</a>
 <script type="text/javascript" src="https://counter.websiteout.com/js/7/6/295/1"></script>
-</footer>
+</footer> 
 
         <!-- 
         11ty layout guide:
+
+        all 11ty njk files lives in _includes folder of the content folder. html files can live outside of the _includes either in the root of the content folder or in subfolders for extra organization. html files living within subfolders MUST utilize the { nesting } variable in order to properly link images, links, and other assets once built.
         
         % include "" % requires a njk file to include.
         % block % requires a PAGE-SPECIFIC njk or html file, in this case index.html, to define the content for that block.
