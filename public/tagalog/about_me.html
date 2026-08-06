@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
     <link rel="stylesheet" href="../dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="../images/page-assets/tamagotchi/ginjirotchi_dance.webp">
+
+    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg"
+        fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2"
+        href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff"
+        href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
+    <link rel="preload" as="font" type="font/woff"
+        href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
+        
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> dingus dangus | about me</title>
@@ -39,42 +49,13 @@
     </script>
     <script src="../dist/js/glightbox.min.js"></script>
     <style>
-        
-.aboutme-box {
-background-color: rgba(215, 239, 250, 0.84);
-border-radius: 0.75em;
-}
+        {
+            % block style %
+        }
 
-#aboutme_list p {
-margin: 8px;
-}
-
-#aboutme_list b {
-font-family: Glacier-Bold;
-}
-
-.movieimage {
-cursor: pointer;
-border: none; /* Removes default borders in older browsers */
-transition: transform 0.2s; /* Smooth effect for hover */
-width: 90px;
-margin-right: 0.5em;
-}
-
-.movieimage:hover {
-transform: scale(1.4);
-z-index: 10;
-}
-
-.pokemon img {
-object-fit: contain;
-}
-
-.pokemon img:hover {
-transform: scale(1.2);
-z-index: 10;
-}
-
+            {
+            % endblock %
+        }
     </style>
 </head>
 
@@ -459,7 +440,7 @@ z-index: 10;
 <p style="margin: 1px; text-align: center;">Last Updated: Aug 02, 2026</p>
 <a href="#" tabindex="-1">Back to Top</a>
 <script type="text/javascript" src="https://counter.websiteout.com/js/7/6/295/1"></script>
-</footer> 
+</footer>
 
         <!-- 
         11ty layout guide:
