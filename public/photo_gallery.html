@@ -2,59 +2,27 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css-files/index.css" />
-    <link rel="stylesheet" href="dist/css/glightbox.css" />
-    <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
-
-    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg"
-        fetchpriority="high">
-    <link rel="preload" as="font" type="font/woff2"
-        href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff"
-        href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
-    <link rel="preload" as="font" type="font/woff"
-        href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
-        
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> dingus dangus | photo gallery</title>
-    <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting - fixes cache issues -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    <title>dingus dangus | photo gallery</title>
 
-            // Path to your CSS file (like usual), or empty ("") if you don't have one:
-            const CSS_FILE_PATH = "style.css";
+    <!-- Icons & Styling -->
+    <link rel="icon" type="image/x-icon" href="images/page-assets/tamagotchi/ginjirotchi_dance.webp">
+    <link rel="stylesheet" href="css-files/index.css" />
+    <link rel="stylesheet" href="dist/css/glightbox.css" />
 
-            // Path to your JS file (like usual), or empty ("") if you don't have one:
-            const JS_FILE_PATH = "script.js";
+    <!-- Resource Preloads -->
+    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
 
-            function loadScript(src) {
-                const script = document.createElement("script");
-                script.src = src + "?nocache=" + new Date().getTime();
-                script.async = true;
-                document.head.appendChild(script);
-            }
-            function loadCSS(href) {
-                const link = document.createElement("link");
-                link.rel = "stylesheet";
-                link.href = href + "?nocache=" + new Date().getTime();
-                document.head.appendChild(link);
-            }
-            if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
-            if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
-        });
+    <!-- Scripts -->
+    <script src="dist/js/glightbox.min.js" defer></script>
 
-        src = "https://iframe.chat/scripts/main.min.js"
-    </script>
-    <script src="dist/js/glightbox.min.js"></script>
     <style>
-        {
-            % block style %
-        }
+        
 
-            {
-            % endblock %
-        }
     </style>
 </head>
 
@@ -325,18 +293,18 @@
             <div
                 style="display: inline-block; text-align: center; font-size: 10px; border: 0px none; overflow: hidden; padding: 0px; margin: 0px; line-height: 10px;">
                 <a href="https://ff.aquarel.nu" style="border: 0px none; background: transparent;"><img
-                        src="images/page-assets/final_fantasy/Cidolfus.png"
+                        src="images/page-assets/final_fantasy/Cidolfus.png" loading="lazy"
                         style="image-rendering: pixelated;"></a><br />Protected by Cidolfus!
             </div>
             <div class="flex-column center-align">
                 <a href="https://ff.aquarel.nu" style="border: 0px none; background: transparent;"><img
-                        src="images/old-web/buttons/website_buttons/exvius_button.gif"
+                        src="images/old-web/buttons/website_buttons/exvius_button.gif" loading="lazy"
                         style="width: 88px; height: 31px;"></a>
                 <a href="https://balambgdn.neocities.org/" style="border: 0px none; background: transparent;"><img
-                        src="images/old-web/buttons/website_buttons/balamb_garden_button.png"
+                        src="images/old-web/buttons/website_buttons/balamb_garden_button.png" loading="lazy"
                         style="width: 88px; height: 31px;"></a>
                 <a href="https://mystikhaven.neocities.org/" style="border: 0px none; background: transparent;"><img
-                        src="images/old-web/buttons/website_buttons/mystikhaven_button.gif"
+                        src="images/old-web/buttons/website_buttons/mystikhaven_button.gif" loading="lazy"
                         style="width: 88px; height: 31px;"></a>
             </div>
         </div>
@@ -346,7 +314,7 @@
     <div class="flex-column center-align">
     <img
                 style="width: 120px; object-fit: contain;"
-                src="images/page-assets/mii.png"></div>
+                src="images/page-assets/mii.png" loading="lazy"></div>
     <hr>
 
     
@@ -355,7 +323,7 @@
         <footer class="dropshadow">
 <p style="margin: 1px; text-align: center;">Last Updated: Aug 05, 2026</p>
 <a href="#" tabindex="-1">Back to Top</a>
-<script type="text/javascript" src="https://counter.websiteout.com/js/7/6/295/1"></script>
+<script type="text/javascript" src="https://counter.websiteout.com/js/7/6/295/1" defer></script>
 </footer>
 
         <!-- 
@@ -374,7 +342,7 @@
         -->
 
     </div>
-    <script src="js-files/glightbox-personal.js"></script>
+    <script src="js-files/glightbox-personal.js" defer></script>
 </body>
 
 </html>
