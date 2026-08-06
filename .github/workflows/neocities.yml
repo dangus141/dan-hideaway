@@ -1,3 +1,4 @@
+#force neocities deployment
 name: Deploy to neocities
 
 on:
