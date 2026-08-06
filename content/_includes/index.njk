@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="{{ nesting }}node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
     <link rel="stylesheet" href="{{ nesting }}dist/css/glightbox.css" />
     <link rel="icon" type="image/x-icon" href="{{ nesting }}images/page-assets/tamagotchi/ginjirotchi_dance.webp">
+
+    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg"
+        fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2"
+        href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff"
+        href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
+    <link rel="preload" as="font" type="font/woff"
+        href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
+        
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> dingus dangus | {{ title }}</title>
@@ -39,8 +49,13 @@
     </script>
     <script src="{{ nesting }}dist/js/glightbox.min.js"></script>
     <style>
-        {% block style %}
-        {% endblock %}
+        {
+            % block style %
+        }
+
+            {
+            % endblock %
+        }
     </style>
 </head>
 
@@ -50,7 +65,7 @@
             "components/nav.njk" %}</nav>
         {% block main %}{% endblock %}
         {% include "components/aside.njk" %}
-        {% include "components/footer.njk" %} 
+        {% include "components/footer.njk" %}
 
         <!-- 
         11ty layout guide:
