@@ -2,59 +2,26 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="{{ nesting }}css-files/index.css{{ nocache }}" />
-    <link rel="stylesheet" href="{{ nesting }}dist/css/glightbox.css" />
-    <link rel="icon" type="image/x-icon" href="{{ nesting }}images/page-assets/tamagotchi/ginjirotchi_dance.webp">
-
-    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg"
-        fetchpriority="high">
-    <link rel="preload" as="font" type="font/woff2"
-        href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff"
-        href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
-    <link rel="preload" as="font" type="font/woff"
-        href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
-        
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> dingus dangus | {{ title }}</title>
-    <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting - fixes cache issues -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    <title>dingus dangus | {{ title }}</title>
 
-            // Path to your CSS file (like usual), or empty ("") if you don't have one:
-            const CSS_FILE_PATH = "style.css";
+    <!-- Icons & Styling -->
+    <link rel="icon" type="image/x-icon" href="{{ nesting }}images/page-assets/tamagotchi/ginjirotchi_dance.webp">
+    <link rel="stylesheet" href="{{ nesting }}css-files/index.css" />
+    <link rel="stylesheet" href="{{ nesting }}dist/css/glightbox.css" />
 
-            // Path to your JS file (like usual), or empty ("") if you don't have one:
-            const JS_FILE_PATH = "script.js";
+    <!-- Resource Preloads -->
+    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
 
-            function loadScript(src) {
-                const script = document.createElement("script");
-                script.src = src + "?nocache=" + new Date().getTime();
-                script.async = true;
-                document.head.appendChild(script);
-            }
-            function loadCSS(href) {
-                const link = document.createElement("link");
-                link.rel = "stylesheet";
-                link.href = href + "?nocache=" + new Date().getTime();
-                document.head.appendChild(link);
-            }
-            if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
-            if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
-        });
+    <!-- Scripts -->
+    <script src="{{ nesting }}dist/js/glightbox.min.js" defer></script>
 
-        src = "https://iframe.chat/scripts/main.min.js"
-    </script>
-    <script src="{{ nesting }}dist/js/glightbox.min.js"></script>
     <style>
-        {
-            % block style %
-        }
-
-            {
-            % endblock %
-        }
+        {% block style %}{% endblock %}
     </style>
 </head>
 
@@ -82,7 +49,7 @@
         -->
 
     </div>
-    <script src="{{ nesting }}js-files/glightbox-personal.js"></script>
+    <script src="{{ nesting }}js-files/glightbox-personal.js" defer></script>
 </body>
 
 </html>
