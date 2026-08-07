@@ -2,42 +2,24 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="../..//css-files/index.css" />
-  <link rel="stylesheet" href="../..//dist/css/glightbox.css" />
-  <link rel="icon" type="image/x-icon" href="../..//images/page-assets/tamagotchi/ginjirotchi_dance.webp">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> dan's hideaway | California 2025</title>
-  <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting - fixes cache issues -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+         <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dingus dangus | California 2025</title>
 
-      // Path to your CSS file (like usual), or empty ("") if you don't have one:
-      const CSS_FILE_PATH = "style.css";
+    <!-- Icons & Styling -->
+    <link rel="icon" type="image/x-icon" href="../../images/page-assets/tamagotchi/ginjirotchi_dance.webp">
+    <link rel="stylesheet" href="../../css-files/index.css" />
+    <link rel="stylesheet" href="../../dist/css/glightbox.css" />
 
-      // Path to your JS file (like usual), or empty ("") if you don't have one:
-      const JS_FILE_PATH = "script.js";
+    <!-- Resource Preloads -->
+    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
+    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
 
-      function loadScript(src) {
-        const script = document.createElement("script");
-        script.src = src + "?nocache=" + new Date().getTime();
-        script.async = true;
-        document.head.appendChild(script);
-      }
-      function loadCSS(href) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href + "?nocache=" + new Date().getTime();
-        document.head.appendChild(link);
-      }
-      if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
-      if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
-    });
+    <!-- Scripts -->
+    <script src="../../dist/js/glightbox.min.js" defer></script>
 
-    src = "https://iframe.chat/scripts/main.min.js"
-  </script>
-  <script src="../..//dist/js/glightbox.min.js"></script>
-  <script src="../..//js-files/gallery-lightbox.js"></script>
   <style>
     .gallery-container>img {
       width: 250px;
@@ -49,13 +31,9 @@
       box-shadow: 3px 3px 5px #666;
     }
 
-      {
-      % block style %
-    }
+      
 
-      {
-      % endblock %
-    }
+      
   </style>
 </head>
 

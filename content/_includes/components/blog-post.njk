@@ -2,45 +2,10 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="{{ nesting }}/css-files/index.css{{ nocache }}" />
-  <link rel="stylesheet" href="{{ nesting}}/dist/css/glightbox.css" />
-  <link rel="icon" type="image/x-icon" href="{{ nesting}}/images/page-assets/tamagotchi/ginjirotchi_dance.webp">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> dan's hideaway | {{ title }}</title>
-  <!-- CACHEBUSTING. https://petrapixel.neocities.org/coding/cachebusting - fixes cache issues -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      // Path to your CSS file (like usual), or empty ("") if you don't have one:
-      const CSS_FILE_PATH = "style.css";
-
-      // Path to your JS file (like usual), or empty ("") if you don't have one:
-      const JS_FILE_PATH = "script.js";
-
-      function loadScript(src) {
-        const script = document.createElement("script");
-        script.src = src + "?nocache=" + new Date().getTime();
-        script.async = true;
-        document.head.appendChild(script);
-      }
-      function loadCSS(href) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href + "?nocache=" + new Date().getTime();
-        document.head.appendChild(link);
-      }
-      if (JS_FILE_PATH) loadScript(JS_FILE_PATH);
-      if (CSS_FILE_PATH) loadCSS(CSS_FILE_PATH);
-    });
-
-    src = "https://iframe.chat/scripts/main.min.js"
-  </script>
-  <script src="{{ nesting }}/dist/js/glightbox.min.js"></script>
-  <style>
-    {% block style %}
-    {% endblock %}
-  </style>
+    {% include "components/system/html-head.njk" %}
+     <style>
+        {% block style %}{% endblock %}
+    </style>
 </head>
 
 <body>
@@ -51,8 +16,8 @@
       <section class="flex-column dropshadow newspaper" style="padding-top: 0;">
         <h2 class="blue-header">{{title}}</h2>
         <div class="internal_content_box padding">
-        <h3 style="font-family: Director; margin-bottom: 0;">{{ date | readableDate }}</h3>
-        <hr>
+          <h3 style="font-family: Director; margin-bottom: 0;">{{ date | readableDate }}</h3>
+          <hr>
           {{ content | safe }}
         </div>
       </section>

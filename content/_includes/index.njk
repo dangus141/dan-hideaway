@@ -2,25 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dingus dangus | {{ title }}</title>
-
-    <!-- Icons & Styling -->
-    <link rel="icon" type="image/x-icon" href="{{ nesting }}images/page-assets/tamagotchi/ginjirotchi_dance.webp">
-    <link rel="stylesheet" href="{{ nesting }}css-files/index.css" />
-    <link rel="stylesheet" href="{{ nesting }}dist/css/glightbox.css" />
-
-    <!-- Resource Preloads -->
-    <link rel="preload" as="image" href="https://dingusdangus.neocities.org/images/bgs/paper/squarepaper.jpg" fetchpriority="high">
-    <link rel="preload" as="font" type="font/woff2" href="https://dingusdangus.neocities.org/fonts/Director/Director-Regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Bold/Glacier-Bold.woff" crossorigin>
-    <link rel="preload" as="font" type="font/woff" href="https://dingusdangus.neocities.org/fonts/Glacier-Regular/Glacier-Regular.woff" crossorigin>
-
-    <!-- Scripts -->
-    <script src="{{ nesting }}dist/js/glightbox.min.js" defer></script>
-
-    <style>
+    {% include "components/system/html-head.njk" %}
+     <style>
         {% block style %}{% endblock %}
     </style>
 </head>
