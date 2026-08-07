@@ -1,0 +1,84 @@
+---
+title: "links"
+date: git Last Modified
+---
+
+{% extends "index.njk" %}
+
+{% block style %}
+.content-container h3 {
+font-family: Director;
+margin-bottom: 0;
+}
+
+.content-container ul {
+margin: 0;
+}
+
+.content-container > ul > h4 {
+font-family: Director;
+text-decoration: underline;
+}
+
+.links-ul h4 {
+margin-bottom: 0.25em;
+text-decoration: underline;
+}
+
+.links-ul li {
+list-style: circle;
+}
+
+{% endblock %}
+
+{% block main %}
+<main>
+    <section class="flex-column dropshadow newspaper" style="padding-top: 0;">
+        <h2 class="blue-header">Links</h2>
+        <div class="content-container" style="gap: 0;">
+            <div class="padding">
+                <p style="text-align: center;">Here are some links to web development resources and assets, other
+                    Neocities websites, and other fun stuff I find on the internet!</p>
+                    <p style="text-align: center;">Feel free to contact me at ritowaterdeep@gmail.com!</p>
+                <hr>
+                <div class="content-container">
+                    <h3>Web Development Resources</h3>
+                    <hr style="width: 50%; margin-top: 0;">
+                    <div class="flex-row flex-wrap">
+                        <ul class="flex-column links-ul">
+                            <h4>Learning HTML/CSS/JavaScript</h4>
+                            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3 Schools</a> -- where I started!</li>
+                            <li><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN Web
+                                    Docs</a> -- up-to-date documentation</li>
+                            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"
+                                    rel="noopener">A Complete CSS Flexbox Layout Guide
+                                </a></li>
+                            <li><a href="https://css-tricks.com/complete-guide-css-grid-layout/" target="_blank" rel="noopener">A Complete CSS Grid Layout Guide</a></li>
+                            <li><a href="https://petrapixel.neocities.org/coding/how-to-make-a-website" target="_blank" rel="noopener">Petra Pixel's Guides</a> -- great guides on Git, node.js, SSGs, and more!</li>
+                        </ul>
+                        <ul class="flex-column links-ul">
+                            <h4>Website Graphics</h4>
+                            <li><a href="https://fauxfur.neocities.org/" target="_blank" rel="noopener">Sawyer's Pixel Hoard</a></li>
+                            <li><a href="http://textures.neocities.org/" target="_blank" rel="noopener">Texture Town</a></li>
+                            <li><a href="https://blinkies.cafe/" target="_blank" rel="noopener">blinkies.cafe</a></li>
+                            <li><a href="https://adriansblinkiecollection.neocities.org/" target="_blank" rel="noopener">Adrian's Blinkie Collection</a> -- also has stamps and buttons!</li>
+                            <li><a href="https://pixelsafari.neocities.org/about/" target="_blank" rel="noopener">Pixel Safari</a></li>
+                            <li><a href="https://pixelmoondust.neocities.org/pixelscenes/general/">Pixel Moondust Scenes</a></li>
+                        </ul>
+                        <ul class="flex-column links-ul">
+                            <h4>Tools & Apps</h4>
+                            <li><a href="https://doodad.dev/dither-me-this/" target="_blank" rel="noopener">Dither Me This</a></li>
+                            <li><a href="https://squoosh.app/" target="_blank" rel="noopener">Sqooush</a> -- an image optimizer</li>
+                            <li><a href="https://maxbittker.github.io/broider/" target="_blank" rel="noopener">Broider</a> -- a pixel border image creator</li>
+                        </ul>
+                    </div>
+                    <h3>Cool Neocities Sites</h3>
+                    <hr style="width: 50%; margin-top: 0;">
+                    <h3>Fun Stuff</h3>
+                    <hr style="width: 50%; margin-top: 0;">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
